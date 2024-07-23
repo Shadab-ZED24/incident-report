@@ -30,3 +30,27 @@ The HSE Incident Reporting System is a React-based application designed to handl
    ```bash
    git clone https://github.com/your-username/hse-incident-reporting-system.git
    cd hse-incident-reporting-system
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+
+##Usage
+1. **Start the development server:**
+   ```bash
+   npm start
+
+   The application will be available at http://localhost:3000 in your browser.
+
+2. **Navigate to the following pages:**
+- **Home Page:** /home - View incidents submitted by the user.
+- **Admin Panel:** /admin - Admin dashboard to manage and view all incidents.
+- **Submit Incident:** /submit - Form to submit a new HSE incident.
+
+##Code Structure
+- **src/:** Main source directory.
+- **components/:** Contains reusable components like Sidebar and Header.
+- **pages/:** Page components for routing (e.g., HomePage, AdminDashboardPage, SubmitIncidentPage).
+- **context/:** Context API for managing state (e.g., IncidentContext).
+- **App.js:** Application component with routing setup.
+- **index.js:** Entry point for the React application.
