@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import SubmitIncidentPage from './pages/SubmitIncidentPage';
+import EditIncidentPage from './pages/EditIncidentPage';
+import AdminDashboardPage from './pages/AdminDashboardPage';
+import { Container } from '@mui/material';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/submit" element={<SubmitIncidentPage />} />
+        <Route path="/edit/:id" element={<EditIncidentPage />} />
+        <Route path="/admin" element={<AdminDashboardPage />} />
+      </Routes>
+    </Container>
   );
-}
+};
 
 export default App;
